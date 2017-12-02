@@ -23,4 +23,9 @@ public class mainclass {
     public static int sid  = 0;
     public static int cost = 0;
     public static int timeInt = 0;
+    public static String smsRecvd = "";
+    public static java.util.Date smsDate;
+    public static String smsSend = "";
+    public static float totAmount = 0;
+    public static String bookingMode = "";
 }

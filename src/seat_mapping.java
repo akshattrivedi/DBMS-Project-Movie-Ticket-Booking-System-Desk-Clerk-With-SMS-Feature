@@ -82,7 +82,7 @@ public class seat_mapping extends javax.swing.JFrame {
          //Display values
          
         System.out.println("SEAT NUMBERS LIST:" + bookedSeats);
-        
+                
         if(bookedSeats.length()>3)                                              //SELECTING STRING OF SEATS ONE BY ONE FOR FINDING PARTICULAR SEAT
         {
             
@@ -265,6 +265,7 @@ public class seat_mapping extends javax.swing.JFrame {
     System.out.println("Goodbye SEATS MAP!");
     lbcount.setText(details);
     submit.setEnabled(false);
+    mainclass.smsSend = "Sorry%20no%20seats%20left%20for%20your%20selection.";
     
     }
 
@@ -302,16 +303,30 @@ public class seat_mapping extends javax.swing.JFrame {
         s5 = new javax.swing.JButton();
         lbcount = new javax.swing.JLabel();
         submit = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Trajan Pro 3", 3, 48)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel1.setFont(new java.awt.Font("Trajan Pro 3", 3, 70)); // NOI18N
         jLabel1.setText("SEATS");
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 125, 246, -1));
 
+        jLabel2.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         jLabel2.setText("GOLD");
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 324, 75, 30));
 
+        jLabel3.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel3.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         jLabel3.setText("SILVER");
+        jLabel3.setOpaque(true);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 399, 75, 30));
 
+        g1.setBackground(new java.awt.Color(153, 204, 255));
         g1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g1.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -320,7 +335,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g1ActionPerformed(evt);
             }
         });
+        getContentPane().add(g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 324, 30, 30));
 
+        g2.setBackground(new java.awt.Color(153, 204, 255));
         g2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g2.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -329,7 +346,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g2ActionPerformed(evt);
             }
         });
+        getContentPane().add(g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 324, 30, 30));
 
+        g3.setBackground(new java.awt.Color(153, 204, 255));
         g3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g3.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -338,7 +357,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g3ActionPerformed(evt);
             }
         });
+        getContentPane().add(g3, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 324, 30, 30));
 
+        g4.setBackground(new java.awt.Color(153, 204, 255));
         g4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g4.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -347,7 +368,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g4ActionPerformed(evt);
             }
         });
+        getContentPane().add(g4, new org.netbeans.lib.awtextra.AbsoluteConstraints(591, 324, 30, 30));
 
+        g5.setBackground(new java.awt.Color(153, 204, 255));
         g5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g5.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -356,7 +379,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g5ActionPerformed(evt);
             }
         });
+        getContentPane().add(g5, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 324, 30, 30));
 
+        g6.setBackground(new java.awt.Color(153, 204, 255));
         g6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g6.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -365,7 +390,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g6ActionPerformed(evt);
             }
         });
+        getContentPane().add(g6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 324, 30, 30));
 
+        g7.setBackground(new java.awt.Color(153, 204, 255));
         g7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g7.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g7.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -374,7 +401,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g7ActionPerformed(evt);
             }
         });
+        getContentPane().add(g7, new org.netbeans.lib.awtextra.AbsoluteConstraints(776, 324, 30, 30));
 
+        g8.setBackground(new java.awt.Color(153, 204, 255));
         g8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g8.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g8.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -383,7 +412,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g8ActionPerformed(evt);
             }
         });
+        getContentPane().add(g8, new org.netbeans.lib.awtextra.AbsoluteConstraints(812, 324, 30, 30));
 
+        g9.setBackground(new java.awt.Color(153, 204, 255));
         g9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g9.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g9.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -392,7 +423,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g9ActionPerformed(evt);
             }
         });
+        getContentPane().add(g9, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 324, 30, 30));
 
+        g10.setBackground(new java.awt.Color(153, 204, 255));
         g10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         g10.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         g10.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -401,7 +434,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 g10ActionPerformed(evt);
             }
         });
+        getContentPane().add(g10, new org.netbeans.lib.awtextra.AbsoluteConstraints(884, 324, 30, 30));
 
+        s6.setBackground(new java.awt.Color(153, 204, 255));
         s6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s6.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -410,7 +445,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s6ActionPerformed(evt);
             }
         });
+        getContentPane().add(s6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 399, 30, 30));
 
+        s7.setBackground(new java.awt.Color(153, 204, 255));
         s7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s7.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s7.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -419,7 +456,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s7ActionPerformed(evt);
             }
         });
+        getContentPane().add(s7, new org.netbeans.lib.awtextra.AbsoluteConstraints(776, 399, 30, 30));
 
+        s8.setBackground(new java.awt.Color(153, 204, 255));
         s8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s8.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s8.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -428,7 +467,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s8ActionPerformed(evt);
             }
         });
+        getContentPane().add(s8, new org.netbeans.lib.awtextra.AbsoluteConstraints(812, 399, 30, 30));
 
+        s1.setBackground(new java.awt.Color(153, 204, 255));
         s1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s1.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -437,7 +478,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s1ActionPerformed(evt);
             }
         });
+        getContentPane().add(s1, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 399, 30, 30));
 
+        s9.setBackground(new java.awt.Color(153, 204, 255));
         s9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s9.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s9.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -446,7 +489,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s9ActionPerformed(evt);
             }
         });
+        getContentPane().add(s9, new org.netbeans.lib.awtextra.AbsoluteConstraints(848, 399, 30, 30));
 
+        s10.setBackground(new java.awt.Color(153, 204, 255));
         s10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s10.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s10.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -455,7 +500,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s10ActionPerformed(evt);
             }
         });
+        getContentPane().add(s10, new org.netbeans.lib.awtextra.AbsoluteConstraints(884, 399, 30, 30));
 
+        s2.setBackground(new java.awt.Color(153, 204, 255));
         s2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s2.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -464,7 +511,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s2ActionPerformed(evt);
             }
         });
+        getContentPane().add(s2, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 399, 30, 30));
 
+        s3.setBackground(new java.awt.Color(153, 204, 255));
         s3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s3.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -473,7 +522,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s3ActionPerformed(evt);
             }
         });
+        getContentPane().add(s3, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 399, 30, 30));
 
+        s4.setBackground(new java.awt.Color(153, 204, 255));
         s4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s4.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -482,7 +533,9 @@ public class seat_mapping extends javax.swing.JFrame {
                 s4ActionPerformed(evt);
             }
         });
+        getContentPane().add(s4, new org.netbeans.lib.awtextra.AbsoluteConstraints(591, 399, 30, 30));
 
+        s5.setBackground(new java.awt.Color(153, 204, 255));
         s5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/vacant.jpg"))); // NOI18N
         s5.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/booked.jpg"))); // NOI18N
         s5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/seat images/clicked_icon.jpg"))); // NOI18N
@@ -491,126 +544,27 @@ public class seat_mapping extends javax.swing.JFrame {
                 s5ActionPerformed(evt);
             }
         });
+        getContentPane().add(s5, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 399, 30, 30));
 
-        lbcount.setFont(new java.awt.Font("Tempus Sans ITC", 3, 18)); // NOI18N
+        lbcount.setBackground(new java.awt.Color(153, 204, 255));
+        lbcount.setFont(new java.awt.Font("Tempus Sans ITC", 3, 48)); // NOI18N
+        lbcount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbcount.setText("                ");
+        lbcount.setOpaque(true);
+        getContentPane().add(lbcount, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 231, 246, 42));
 
+        submit.setBackground(new java.awt.Color(153, 204, 255));
+        submit.setFont(new java.awt.Font("Trajan Pro 3", 1, 48)); // NOI18N
         submit.setText("SUBMIT");
         submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitActionPerformed(evt);
             }
         });
+        getContentPane().add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 485, -1, 52));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(s1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                                .addComponent(s6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(s10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(g1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(g6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(g10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(135, 135, 135))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(263, 263, 263))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(263, 263, 263)
-                .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbcount, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(162, 162, 162))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbcount, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(g1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(g10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel2)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(s1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(s10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/back_lights.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1386, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1132,7 +1086,7 @@ public class seat_mapping extends javax.swing.JFrame {
                    "VALUES ('"+mainclass.sid+"','"+mainclass.ticketID+"','"+mainclass.selected_movie+"',"+mainclass.cost+")";
       stmt.executeUpdate(sql);
       sql = "INSERT INTO customer_info " +
-                   "VALUES ('"+mainclass.ticketID+"','"+mainclass.custName+"','"+mainclass.selected_movie+"','"+mainclass.time_booked+"','"+mainclass.ticketSeatNo+"',"+mainclass.final_screen_no+",'"+mainclass.custPh+"','"+mainclass.date+"',"+mainclass.finalTicketCount+")" ;                      
+                   "VALUES ('"+mainclass.ticketID+"','"+mainclass.custName+"','"+mainclass.selected_movie+"','"+mainclass.time_booked+"','"+mainclass.ticketSeatNo+"',"+mainclass.final_screen_no+",'"+mainclass.custPh+"','"+mainclass.date+"',"+mainclass.finalTicketCount+",'"+mainclass.bookingMode+"')" ;                      
       stmt.executeUpdate(sql);
       sql = "INSERT INTO seat_info " +
                    "VALUES ('"+mainclass.sid+"',"+mainclass.final_screen_no+","+mainclass.finalTicketCount+","+newSeatsAvail+",20,'"+mainclass.ticketSeatNo+"')";
@@ -1217,6 +1171,7 @@ public class seat_mapping extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lbcount;
     private javax.swing.JButton s1;
     private javax.swing.JButton s10;

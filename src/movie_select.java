@@ -103,112 +103,100 @@ public class movie_select extends javax.swing.JFrame {
         txtd = new javax.swing.JTextField();
         txtua = new javax.swing.JTextField();
         btbook = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        select_movie_tiitle.setBackground(new java.awt.Color(153, 204, 255));
+        select_movie_tiitle.setFont(new java.awt.Font("Trajan Pro 3", 1, 50)); // NOI18N
         select_movie_tiitle.setText("SELECT MOVIE");
+        select_movie_tiitle.setOpaque(true);
+        getContentPane().add(select_movie_tiitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, 60));
 
-        cbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---------------------------SELECT---------------------------", "Spider-Man:Homecoming", "Dunkirk", "Baby Driver", "Wonder Woman", "Logan", "Annabelle: The Creation", "Dangal", "Baahubali: The Beginning" }));
+        cbox.setBackground(new java.awt.Color(153, 204, 255));
+        cbox.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
+        cbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--------------------SELECT--------------------", "Spider-Man:Homecoming", "Dunkirk", "Baby Driver", "Wonder Woman", "Logan", "Annabelle: The Creation", "Dangal", "Baahubali: The Beginning" }));
         cbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxActionPerformed(evt);
             }
         });
+        getContentPane().add(cbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 350, -1));
+        getContentPane().add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 350, 518));
 
+        txt1.setBackground(new java.awt.Color(153, 204, 255));
+        txt1.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
+        txt1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt1ActionPerformed(evt);
             }
         });
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 520, -1));
 
+        lbm.setBackground(new java.awt.Color(153, 204, 255));
+        lbm.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
         lbm.setText("MOVIE NAME:");
+        lbm.setOpaque(true);
+        getContentPane().add(lbm, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, -1, -1));
 
+        lbsc.setBackground(new java.awt.Color(153, 204, 255));
+        lbsc.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
         lbsc.setText("STARCAST:");
+        lbsc.setOpaque(true);
+        getContentPane().add(lbsc, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, -1, -1));
 
+        lbr.setBackground(new java.awt.Color(153, 204, 255));
+        lbr.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
         lbr.setText("RATINGS:");
+        lbr.setOpaque(true);
+        getContentPane().add(lbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, -1, -1));
 
+        lbd.setBackground(new java.awt.Color(153, 204, 255));
+        lbd.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
         lbd.setText("DURATION:");
+        lbd.setOpaque(true);
+        getContentPane().add(lbd, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, -1, -1));
 
+        lbua.setBackground(new java.awt.Color(153, 204, 255));
+        lbua.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
         lbua.setText("U/A RATING:");
+        lbua.setOpaque(true);
+        getContentPane().add(lbua, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 380, -1, -1));
 
+        txtn.setBackground(new java.awt.Color(153, 204, 255));
+        txtn.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
+        getContentPane().add(txtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 170, 360, -1));
+
+        txtsc.setBackground(new java.awt.Color(153, 204, 255));
+        txtsc.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
+        getContentPane().add(txtsc, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, 360, -1));
+
+        txtr.setBackground(new java.awt.Color(153, 204, 255));
+        txtr.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
+        getContentPane().add(txtr, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 360, -1));
+
+        txtd.setBackground(new java.awt.Color(153, 204, 255));
+        txtd.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
+        getContentPane().add(txtd, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 320, 360, -1));
+
+        txtua.setBackground(new java.awt.Color(153, 204, 255));
+        txtua.setFont(new java.awt.Font("Trajan Pro 3", 1, 14)); // NOI18N
+        getContentPane().add(txtua, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 370, 360, -1));
+
+        btbook.setBackground(new java.awt.Color(153, 204, 255));
+        btbook.setFont(new java.awt.Font("Trajan Pro 3", 1, 80)); // NOI18N
         btbook.setText("BOOK");
         btbook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btbookActionPerformed(evt);
             }
         });
+        getContentPane().add(btbook, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 530, 520, 159));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbm)
-                                    .addComponent(lbsc)
-                                    .addComponent(lbr)
-                                    .addComponent(lbd)
-                                    .addComponent(lbua))
-                                .addGap(48, 48, 48)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtua, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
-                                    .addComponent(txtd, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
-                                    .addComponent(txtr)
-                                    .addComponent(txtsc)
-                                    .addComponent(txtn)))
-                            .addComponent(txt1)
-                            .addComponent(btbook, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(392, 392, 392)
-                        .addComponent(select_movie_tiitle)))
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(select_movie_tiitle, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbm)
-                            .addComponent(txtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbsc)
-                            .addComponent(txtsc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbr)
-                            .addComponent(txtr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbd)
-                            .addComponent(txtd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbua)
-                            .addComponent(txtua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(97, 97, 97)
-                        .addComponent(btbook, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/back_lights.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1386, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -594,6 +582,7 @@ public class movie_select extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btbook;
     private javax.swing.JComboBox<String> cbox;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbd;
     private javax.swing.JLabel lbm;
     private javax.swing.JLabel lbr;

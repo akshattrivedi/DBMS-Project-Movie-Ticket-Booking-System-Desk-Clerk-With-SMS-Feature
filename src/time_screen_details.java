@@ -21,6 +21,7 @@ public class time_screen_details extends javax.swing.JFrame {
         
         String movie_name= mainclass.selected_movie;
         String time_selected = "";
+        mainclass.bookingMode = "COUNTER";
         System.out.println("SELECTED MOVIE NAME="+movie_name);
         initComponents();
         
@@ -39,6 +40,8 @@ public class time_screen_details extends javax.swing.JFrame {
         txtcustph.setVisible(false);
         lbsn.setVisible(false);
         lbtime.setVisible(false);
+        lbsno.setVisible(false);
+        lbt.setVisible(false);
         
         
          // JDBC driver name and database URL
@@ -165,136 +168,134 @@ public class time_screen_details extends javax.swing.JFrame {
         txtcustname = new javax.swing.JTextField();
         lbcustph = new javax.swing.JLabel();
         txtcustph = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         jLabel2.setText("SELECT TIME:");
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 157, -1, -1));
 
+        rd9am.setBackground(new java.awt.Color(153, 204, 255));
         buttonGroup1.add(rd9am);
+        rd9am.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         rd9am.setText("09:00 am");
+        getContentPane().add(rd9am, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 153, -1, -1));
 
+        rd12pm.setBackground(new java.awt.Color(153, 204, 255));
         buttonGroup1.add(rd12pm);
+        rd12pm.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         rd12pm.setText("12:00 pm");
+        getContentPane().add(rd12pm, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 153, -1, -1));
 
+        rd3pm.setBackground(new java.awt.Color(153, 204, 255));
         buttonGroup1.add(rd3pm);
+        rd3pm.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         rd3pm.setText("03:00 pm");
+        getContentPane().add(rd3pm, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 153, -1, -1));
 
+        rd6pm.setBackground(new java.awt.Color(153, 204, 255));
         buttonGroup1.add(rd6pm);
+        rd6pm.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         rd6pm.setText("06:00 pm");
+        getContentPane().add(rd6pm, new org.netbeans.lib.awtextra.AbsoluteConstraints(907, 153, -1, -1));
 
+        rd9pm.setBackground(new java.awt.Color(153, 204, 255));
         buttonGroup1.add(rd9pm);
+        rd9pm.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         rd9pm.setText("09:00 pm");
+        getContentPane().add(rd9pm, new org.netbeans.lib.awtextra.AbsoluteConstraints(1042, 153, -1, -1));
 
+        lbsn.setBackground(new java.awt.Color(153, 204, 255));
+        lbsn.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         lbsn.setText("SCREEN NO:");
+        lbsn.setOpaque(true);
+        getContentPane().add(lbsn, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 335, -1, -1));
 
+        lbsno.setBackground(new java.awt.Color(153, 204, 255));
+        lbsno.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
+        lbsno.setOpaque(true);
+        getContentPane().add(lbsno, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 335, 155, 19));
+
+        lbtime.setBackground(new java.awt.Color(153, 204, 255));
+        lbtime.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         lbtime.setText("TIME:");
+        lbtime.setOpaque(true);
+        getContentPane().add(lbtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 335, -1, -1));
 
+        lbt.setBackground(new java.awt.Color(153, 204, 255));
+        lbt.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
+        lbt.setOpaque(true);
+        getContentPane().add(lbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1161, 335, 155, 19));
+
+        jButton1.setBackground(new java.awt.Color(153, 204, 255));
+        jButton1.setFont(new java.awt.Font("Trajan Pro 3", 1, 36)); // NOI18N
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 220, -1, 54));
 
+        jButton2.setBackground(new java.awt.Color(153, 204, 255));
+        jButton2.setFont(new java.awt.Font("Trajan Pro 3", 1, 36)); // NOI18N
         jButton2.setText("BOOK SEATS");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 500, -1, 74));
 
+        lbnot.setBackground(new java.awt.Color(153, 204, 255));
+        lbnot.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         lbnot.setText("NUMBER OF TICKETS:");
+        lbnot.setOpaque(true);
+        getContentPane().add(lbnot, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 418, -1, -1));
 
+        cmb.setBackground(new java.awt.Color(153, 204, 255));
+        cmb.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         cmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---SELECT---", "1", "2", "3", "4", "5" }));
         cmb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbActionPerformed(evt);
             }
         });
+        getContentPane().add(cmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 415, -1, -1));
 
+        lbcustname.setBackground(new java.awt.Color(153, 204, 255));
+        lbcustname.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         lbcustname.setText("CUSTOMER NAME:");
+        lbcustname.setOpaque(true);
+        getContentPane().add(lbcustname, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 375, -1, -1));
 
+        txtcustname.setBackground(new java.awt.Color(153, 204, 255));
+        txtcustname.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
+        getContentPane().add(txtcustname, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 372, 155, -1));
+
+        lbcustph.setBackground(new java.awt.Color(153, 204, 255));
+        lbcustph.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
         lbcustph.setText("CUSTOMER PHONE NO:");
+        lbcustph.setOpaque(true);
+        getContentPane().add(lbcustph, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 375, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(lbsn)
-                            .addComponent(lbnot)
-                            .addComponent(lbcustname))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(rd9am, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lbsno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addComponent(rd12pm))
-                            .addComponent(cmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtcustname, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbcustph)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtcustph, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(rd3pm)
-                                .addGap(18, 18, 18)
-                                .addComponent(rd6pm)
-                                .addGap(18, 18, 18)
-                                .addComponent(rd9pm))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbtime)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))
-                        .addGap(172, 172, 172)))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(rd9am)
-                    .addComponent(rd12pm)
-                    .addComponent(rd3pm)
-                    .addComponent(rd6pm)
-                    .addComponent(rd9pm))
-                .addGap(39, 39, 39)
-                .addComponent(jButton1)
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbsn)
-                    .addComponent(lbsno, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbtime)
-                    .addComponent(lbt, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbcustname)
-                    .addComponent(txtcustname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbcustph)
-                    .addComponent(txtcustph, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbnot)
-                    .addComponent(cmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        txtcustph.setBackground(new java.awt.Color(153, 204, 255));
+        txtcustph.setFont(new java.awt.Font("Trajan Pro 3", 1, 18)); // NOI18N
+        getContentPane().add(txtcustph, new org.netbeans.lib.awtextra.AbsoluteConstraints(1161, 372, 155, -1));
+
+        jLabel1.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel1.setFont(new java.awt.Font("Trajan Pro 3", 3, 48)); // NOI18N
+        jLabel1.setText("TIME , SCREEN AND NUMBER OF TICKETS");
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 60, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/back_lights.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1386, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -311,6 +312,8 @@ public class time_screen_details extends javax.swing.JFrame {
     txtcustph.setVisible(true);
     lbsn.setVisible(true);
     lbtime.setVisible(true);
+    lbt.setVisible(true);
+    lbsno.setVisible(true);
     
     if(rd9am.isSelected())
     {
@@ -461,7 +464,9 @@ public class time_screen_details extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmb;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lbcustname;
     private javax.swing.JLabel lbcustph;
     private javax.swing.JLabel lbnot;

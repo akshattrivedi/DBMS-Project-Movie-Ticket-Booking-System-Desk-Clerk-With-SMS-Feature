@@ -22,7 +22,7 @@ public class customer_bill extends javax.swing.JFrame {
      * Creates new form customer_bill
      */
     public customer_bill() {
-
+        super("BILL");
         initComponents();
         
         images = new ImageIcon[filename.length];
@@ -36,10 +36,10 @@ public class customer_bill extends javax.swing.JFrame {
         }
         
         float gst = 0;
-        float amount = 0;
+        
         
         gst = ( 18 * mainclass.cost ) / 100;
-        amount = mainclass.cost + gst ;
+        mainclass.totAmount = mainclass.cost + gst ;
         
         DateFormat dateFormat1 = new SimpleDateFormat("dd/MM/yyyy");
         java.util.Date date1 = new java.util.Date();
@@ -55,7 +55,7 @@ public class customer_bill extends javax.swing.JFrame {
         lbsno.setText(mainclass.ticketSeatNo);
         lbcost.setText("Rs. " +mainclass.cost + ".00");
         lbgst.setText("Rs. " + gst +"0");
-        lbamt.setText("Rs. " + amount + "0");
+        lbamt.setText("Rs. " + mainclass.totAmount + "0");
         
         
         if(mainclass.selected_movie == "Spiderman")
@@ -106,7 +106,7 @@ public class customer_bill extends javax.swing.JFrame {
             pic.setIcon(images[7]);
         }
         
-        
+        mainclass.smsSend = ""+mainclass.custName+":Your%20booking%20is%20confirmed%20with%20ticket%20ID%20="+mainclass.ticketID+"%20.Kindly%20show%20this%20ID%20at%20booking%20counter%20in%20an%20hour%20with%20amount=Rs."+mainclass.totAmount+"%20.Thanks!";
         
     }
 
@@ -141,197 +141,149 @@ public class customer_bill extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         lbcustname = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 86, 350, 518));
 
+        jLabel2.setBackground(new java.awt.Color(153, 204, 255));
         jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(136, 224, 48));
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("YOUR BOOKING IS CONFIRMED !");
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 29, -1, 39));
 
+        jLabel3.setBackground(new java.awt.Color(153, 204, 255));
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel3.setText("BOOKING ID:");
+        jLabel3.setOpaque(true);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 136, -1, -1));
 
+        lbbid.setBackground(new java.awt.Color(153, 204, 255));
         lbbid.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         lbbid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbbid.setOpaque(true);
+        getContentPane().add(lbbid, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 139, 99, 14));
 
+        lbmoviename.setBackground(new java.awt.Color(153, 204, 255));
         lbmoviename.setFont(new java.awt.Font("Times New Roman", 3, 30)); // NOI18N
         lbmoviename.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbmoviename.setText(" ");
+        lbmoviename.setOpaque(true);
+        getContentPane().add(lbmoviename, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 186, 294, -1));
 
+        lbtime.setBackground(new java.awt.Color(153, 204, 255));
         lbtime.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lbtime.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbtime.setOpaque(true);
+        getContentPane().add(lbtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 255, 82, 33));
 
+        lbdate.setBackground(new java.awt.Color(153, 204, 255));
         lbdate.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lbdate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbdate.setOpaque(true);
+        getContentPane().add(lbdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(867, 255, 141, 33));
 
+        lbticketcount.setBackground(new java.awt.Color(153, 204, 255));
         lbticketcount.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         lbticketcount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbticketcount.setOpaque(true);
+        getContentPane().add(lbticketcount, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 352, 50, 50));
 
+        jLabel4.setBackground(new java.awt.Color(153, 204, 255));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Tickets");
+        jLabel4.setOpaque(true);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 408, 50, -1));
 
+        jLabel5.setBackground(new java.awt.Color(153, 204, 255));
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("SCREEN:");
+        jLabel5.setOpaque(true);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 321, -1, 25));
 
+        lbscreen.setBackground(new java.awt.Color(153, 204, 255));
         lbscreen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        lbscreen.setOpaque(true);
+        getContentPane().add(lbscreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(865, 321, 50, 25));
 
+        lbsno.setBackground(new java.awt.Color(153, 204, 255));
         lbsno.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        lbsno.setOpaque(true);
+        getContentPane().add(lbsno, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 352, 204, 50));
 
+        jLabel6.setBackground(new java.awt.Color(153, 204, 255));
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel6.setText("TICKET COST");
+        jLabel6.setOpaque(true);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 478, -1, -1));
 
+        lbcost.setBackground(new java.awt.Color(153, 204, 255));
         lbcost.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         lbcost.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbcost.setOpaque(true);
+        getContentPane().add(lbcost, new org.netbeans.lib.awtextra.AbsoluteConstraints(938, 478, 70, 14));
 
+        jLabel7.setBackground(new java.awt.Color(153, 204, 255));
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel7.setText("Integrated GST (IGST) @ 18.00%");
+        jLabel7.setOpaque(true);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 526, -1, -1));
 
+        lbgst.setBackground(new java.awt.Color(153, 204, 255));
         lbgst.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         lbgst.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbgst.setOpaque(true);
+        getContentPane().add(lbgst, new org.netbeans.lib.awtextra.AbsoluteConstraints(938, 526, 70, 14));
 
+        jLabel9.setBackground(new java.awt.Color(153, 204, 255));
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel9.setText("TOTAL AMOUNT");
+        jLabel9.setOpaque(true);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 574, -1, -1));
 
+        lbamt.setBackground(new java.awt.Color(153, 204, 255));
         lbamt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         lbamt.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbamt.setOpaque(true);
+        getContentPane().add(lbamt, new org.netbeans.lib.awtextra.AbsoluteConstraints(938, 574, 70, 14));
 
+        jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setText("EXIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 639, 125, 43));
 
+        jButton2.setBackground(new java.awt.Color(153, 204, 255));
         jButton2.setText("MAIN MENU");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 639, 125, 43));
 
+        jLabel1.setBackground(new java.awt.Color(153, 204, 255));
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel1.setText("CUSTOMER NAME:");
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 86, -1, -1));
 
+        lbcustname.setBackground(new java.awt.Color(153, 204, 255));
         lbcustname.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         lbcustname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbcustname.setOpaque(true);
+        getContentPane().add(lbcustname, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 86, 99, 14));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(161, 161, 161))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lbticketcount, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lbscreen, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lbsno, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lbtime, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(35, 35, 35)
-                                    .addComponent(lbdate, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel6)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel7)
-                                                .addGap(25, 25, 25)))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel9)
-                                            .addGap(110, 110, 110)))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lbamt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lbcost, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lbgst, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addContainerGap(32, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbmoviename, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lbbid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lbcustname, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE))))
-                        .addGap(52, 52, 52))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(lbcustname, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(lbbid, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33)
-                        .addComponent(lbmoviename)
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbtime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbdate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbscreen, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbsno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbticketcount, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(lbcost, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbgst, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(lbamt, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/back_lights.jpg"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -350,6 +302,10 @@ public class customer_bill extends javax.swing.JFrame {
        mainclass.sid  = 0;
        mainclass.cost = 0;
        mainclass.timeInt = 0;
+       mainclass.totAmount = 0;
+       mainclass.smsRecvd = "";
+       mainclass.smsSend = "";
+       mainclass.bookingMode = "";
         
        new menu().setVisible(true);
        this.dispose();
@@ -405,6 +361,7 @@ public class customer_bill extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lbamt;
     private javax.swing.JLabel lbbid;
