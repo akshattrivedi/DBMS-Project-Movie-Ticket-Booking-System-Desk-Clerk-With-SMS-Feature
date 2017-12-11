@@ -313,6 +313,22 @@ public class customer_bill extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        mainclass.selected_movie = "";
+       mainclass.time_booked = "";
+       mainclass.final_screen_no = "";
+       mainclass.finalTicketCount = "";
+       mainclass.custName = "";
+       mainclass.custPh = "";
+       mainclass.ticketID = "";
+       mainclass.date = "";
+       mainclass.ticketSeatNo = "";
+       mainclass.sid  = 0;
+       mainclass.cost = 0;
+       mainclass.timeInt = 0;
+       mainclass.totAmount = 0;
+       mainclass.smsRecvd = "";
+       mainclass.smsSend = "";
+       mainclass.bookingMode = "";
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

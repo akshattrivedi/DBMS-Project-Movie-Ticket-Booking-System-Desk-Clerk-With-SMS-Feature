@@ -29,6 +29,7 @@ public class seat_mapping extends javax.swing.JFrame {
     
     
     // JDBC driver name and database URL
+    
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
    static final String DB_URL = "jdbc:mysql://localhost/movies";
 
@@ -40,6 +41,14 @@ public class seat_mapping extends javax.swing.JFrame {
      */
     public seat_mapping() {
         super("SEATS");
+        
+        mainclass.ticketSeatNo = "";
+        for(int i=0;i<20;i++)
+        {
+            System.out.println("HELLO EMPTY SEAT STRING");
+            seat_clicked[i] = null;
+        }
+        
         System.out.println("\n\nTICKET COUNTER:("+ccount+","+ticket_count+") \n\n");
         images = new ImageIcon[seatIcon.length];
         Integer[] intArray = new Integer[seatIcon.length];
